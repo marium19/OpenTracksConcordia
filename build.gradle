@@ -1,5 +1,15 @@
 apply plugin: 'com.android.application'
 
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.0-beta01'
+    }
+}
+
 plugins {
   id "org.sonarqube" version "4.2.1.3168"
 }
@@ -11,15 +21,7 @@ sonar {
   }
 }
 
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.0-beta01'
-    }
-}
+
 
 allprojects {
     repositories {
